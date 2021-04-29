@@ -1,8 +1,7 @@
 **Exposed assets** 
 
 This tool allows you to gather IT/OT exposed assets for Threat Intelligence analysis. The tool
-uses the official Python [Shodan](https://github.com/achillean/shodan-python) and [ZoomEye]
-(https://github.com/knownsec/ZoomEye-python) libraries.
+uses the official Python [Shodan](https://github.com/achillean/shodan-python) and [ZoomEye](https://github.com/knownsec/ZoomEye-python) libraries.
 
 The usage of the tool is very simple. The tool needs a list of dorks (located at config
 ->config_files->dorks.txt) that will use for searching in both search engines. In this case,
