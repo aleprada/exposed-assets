@@ -18,8 +18,8 @@ def test_software_list():
     result = load_file('dorks.txt')
     assert len(result) > 0
 
-#Enable only in local
-
+#Enable only in local.Try to mock external services.
+'''
 def test_shodan():
     assets = shodan_search("Apache")
     assert len(assets) >= 0
@@ -27,4 +27,4 @@ def test_shodan():
 
 def test_zoomeye():
     assets = zoomeye_search("Apache")
-    assert len(assets) >= 0
+    assert len(assets) >= 0 '''
