@@ -1,0 +1,4 @@
+pymisp==2.4.141.1
+pytest==6.2.3
+shodan==1.25.0
+zoomeye==2.0.4.6.1

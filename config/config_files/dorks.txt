@@ -1,0 +1,11 @@
+NETSurveillance uc-httpd
+Schneider Electric
+port:502
+port:2222
+port:1089
+axis
+dvr
+cctv
+WWW-Authenticate: Basic realm=\"Merit LILIN Ent. Co., Ltd.\"
+RDP
+VNC

@@ -1,0 +1,17 @@
+#virtualenv
+/venv
+#build
+/build
+
+#config
+/config/config_files/config_prod.ini
+/config/config_files/dorks_prod.txt
+
+#pychar metadata
+.idea/
+
+.pyc
+*.pyo
+.cpython
+__pycache__/
+/test/.pytest_cache
