@@ -1,5 +1,0 @@
-alstom
-bombardier
-talgo
-renfe
-rail

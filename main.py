@@ -30,14 +30,13 @@ def main():
     print("[*] Gathering IT/OT exposed assets")
     alerts = search()
 
-    filtered_alerts = filter_alerts_with_keywords(alerts)
-
     if args.alerts:
         print("[*] Checking if IT/OT assets gathered contain any keyword of your list.")
         filtered_alerts = filter_alerts_with_keywords(alerts)
         if args.verbose:
             for a in filtered_alerts:
                 a.show_alert()
+            print("[*] Number of IT/OT exposed assets with alert: " + str(len(filtered_alerts)))
         if args.misp:
             if args.proxy:
                 proxy_usage = True
@@ -45,9 +44,9 @@ def main():
             save_exposed_assets(filtered_alerts, proxy_usage)
 
     elif args.verbose:
-        for a in filtered_alerts:
+        for a in alerts:
             a.show_alert()
-    print("[*] Number of IT/OT exposed assets discovered: "+str(len(filtered_alerts)))
+        print("[*] Number of IT/OT exposed assets discovered: "+str(len(alerts)))
 
 
 if __name__ == '__main__':

@@ -41,7 +41,7 @@ def save_exposed_assets(sealerts, proxy_usage):
     misp = misp_connection(config_parser("misp","url"),config_parser("misp", "api_key"), proxy_usage)
     for asset in sealerts:
         event = create_event(misp)
-        event.add_tag("circl:incident-classification=\"vulnerability\"")
+        event.add_tag("exposed-asset")
         event.info = "[Exposed Asset] New potential rail asset exposed"
         event.add_attribute('ip-dst', asset.ip)
         event.add_attribute('port', asset.port)

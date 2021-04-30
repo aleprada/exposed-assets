@@ -29,7 +29,7 @@ def save_alert(f):
         for v in f['vulns']:
             alert.add_vulnerability(v, f['vulns'][v]['cvss'])
     if 'os' in f:
-        alert.add_os(f['os'])
+        alert.add_app(f['os'])
     if 'hostnames' in f:
         alert.add_hostname(f['hostnames'])
     if 'timestamp' in f:

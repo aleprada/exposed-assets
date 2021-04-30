@@ -1,6 +1,5 @@
 from config.config import load_file
 
-
 class SEAlert:
     def __init__(self, search_engine, ip, port, country,banner):
         self.search_engine = search_engine
@@ -14,7 +13,7 @@ class SEAlert:
         self.asn = None
         self.vulnerabilities = {}
         self.timestamp = None
-        self.os = None
+        self.app = None
 
     def add_hostname(self, hostname):
         self.hostname = hostname
@@ -28,8 +27,8 @@ class SEAlert:
     def add_vulnerability(self, cve, cvss):
         self.vulnerabilities[cve] = cvss
 
-    def add_os(self, os):
-        self.os = os
+    def add_app(self, app):
+        self.app = app
 
     def add_timestamp(self, timestamp):
         self.timestamp = timestamp
@@ -37,7 +36,7 @@ class SEAlert:
     def show_alert(self):
         print("\t[+] New device found on: "+self.search_engine)
         print('\t\t IP: ' + self.ip + ' port: ' + str(self.port))
-        print('\t\t Device: ' + str(self.os))
+        print('\t\t Device: ' + str(self.app))
         print('\t\t City: ' + str(self.city) + ' Country: ' + self.country + ' ASN: ' + str(self.asn))
         if len(self.vulnerabilities) > 0:
             for cve, cvss in self.vulnerabilities.items():
@@ -52,7 +51,6 @@ def filter_alerts_with_keywords(full_alert_list):
             if k in a.banner:
                 alert_list.append(a)
     return alert_list
-
 
 
 #save a sqlite db with alerts. If there's match query SQLI if the alert was already saved. If not send alert.
