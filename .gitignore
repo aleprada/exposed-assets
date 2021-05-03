@@ -7,6 +7,7 @@
 /config/config_files/config.ini
 /config/config_files/config_prod.ini
 /config/config_files/dorks_prod.txt
+/config/config_files/alerts_keywords_prod.txt
 
 #pychar metadata
 .idea/

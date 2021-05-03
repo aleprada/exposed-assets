@@ -45,7 +45,7 @@ class SEAlert:
 
 def filter_alerts_with_keywords(full_alert_list):
     alert_list =[]
-    alert_keywords = load_file("alerts_keywords.txt")
+    alert_keywords = load_file("alerts_keywords_prod.txt")
     for a in full_alert_list:
         for k in alert_keywords:
             if k in a.banner:
