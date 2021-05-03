@@ -1,4 +1,5 @@
-**Exposed assets** 
+**Exposed assets**  
+![Build Status](https://travis-ci.com/aleprada/exposed-assets.svg?branch=main)
 
 This tool allows you to gather IT/OT exposed assets for Threat Intelligence analysis. The tool
 uses the official Python [Shodan](https://github.com/achillean/shodan-python) and [ZoomEye](https://github.com/knownsec/ZoomEye-python) libraries.
@@ -85,9 +86,6 @@ Output
 ```
 
 **ToDo List**
-
-* Create a MISP object for exposed assets.
 * Publish a list of Dorks related to ICS/SCADA Cameras.
 * Detect vulnerabilities (CVE) in ZoomEye.
-* Use multi-page search of ZoomEye.
 * Add other search engines (e.g. Censys)

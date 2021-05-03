@@ -1,1 +1,21 @@
 Gill Instruments
+WindSonic
+linux upnp avtech
+server:=MJPG-Streamer/0.%
+basic realm="camera"
+Digest realm="IP webcam"
+PLC
+SCADA
+HMI
+S7-200
+S7-300
+port:502
+port:2222
+port:1883
+port:44818
+port:5006,5007 product:mitsubishi
+port:5500,5509
+port:2455 operating system
+port:20547 PLC
+port:789 product:"Red Lion Controls"
+port:1911,4911 product:Niagara
