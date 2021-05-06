@@ -49,7 +49,7 @@ def shodan_search(keyword):
             alert = save_alert(result)
             alerts.append(alert)
     except shodan.APIError as e:
-        print('Error: {}'.format(e))
+        print('\t[!] Error: {}'.format(e))
 
     return alerts
 

@@ -1,13 +1,13 @@
 from search_engines.zoomeye_se import zoomeye_search
 from search_engines.shodan_se import shodan_search
-from search_engines.sealerts import SEAlert, filter_alerts_with_keywords
+from search_engines.sealerts import filter_alerts_with_keywords
 from config.config import load_file
 from misp_alerts.misp import save_exposed_assets
 import argparse
 
 
 def search():
-    dorks = load_file("dorks.txt")
+    dorks = load_file("dorks_prod.txt")
     alerts = []
     for d in dorks:
         print("\t[*] Searching: "+d)

@@ -13,6 +13,9 @@ After gathering the results from the different search engines, the tool has the 
 of correlating(-a) the banner of each host with a list of keywords (config->config_files->alerts_keywords). In case of 
 a match, the alerts can be **shown on the screen (-v)** and/or **sent to a MISP instance(-m)**.
 
+In order to avoid duplicated alerts on your MISP instance, the tool saves the alerts in a SQLite database for checking if 
+the alerts was already sent to MISP.
+
 **Usage**
 
 Looking for IT/OT exposed assets.

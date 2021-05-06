@@ -5,7 +5,7 @@ from search_engines.zoomeye_se import zoomeye_search
 
 
 def test_config_parser():
-    result = config_parser("misp","url")
+    result = config_parser("misp", "url")
     assert len(result) > 0
 
 

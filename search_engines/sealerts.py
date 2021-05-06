@@ -1,4 +1,5 @@
-from config.config import load_file
+from config.config import load_file, save_alert_db, check_saved_threats
+
 
 class SEAlert:
     def __init__(self, search_engine, ip, port, country,banner):
@@ -44,15 +45,16 @@ class SEAlert:
 
 
 def filter_alerts_with_keywords(full_alert_list):
-    alert_list =[]
+    alert_list = []
     alert_keywords = load_file("alerts_keywords_prod.txt")
     for a in full_alert_list:
-        for k in alert_keywords:
-            if k in a.banner:
-                alert_list.append(a)
+        already_stored = check_saved_threats(a.ip, a.port, a.timestamp)
+        if already_stored is True:
+            continue
+        else:
+            for k in alert_keywords:
+                if k in a.banner:
+                    alert_list.append(a)
+                    save_alert_db(a.timestamp, a.ip, a.port, a.country)
     return alert_list
 
-
-#save a sqlite db with alerts. If there's match query SQLI if the alert was already saved. If not send alert.
-def check_stored_alert():
-    return 0
