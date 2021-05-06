@@ -7,7 +7,7 @@ import argparse
 
 
 def search():
-    dorks = load_file("dorks_prod.txt")
+    dorks = load_file("dorks.txt")
     alerts = []
     for d in dorks:
         print("\t[*] Searching: "+d)

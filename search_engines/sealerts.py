@@ -46,7 +46,7 @@ class SEAlert:
 
 def filter_alerts_with_keywords(full_alert_list):
     alert_list = []
-    alert_keywords = load_file("alerts_keywords_prod.txt")
+    alert_keywords = load_file("alerts_keywords.txt")
     for a in full_alert_list:
         already_stored = check_saved_threats(a.ip, a.port, a.timestamp)
         if already_stored is True:
