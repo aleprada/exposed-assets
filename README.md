@@ -5,7 +5,7 @@ This tool allows you to gather IT/OT exposed assets for Threat Intelligence anal
 uses the official Python [Shodan](https://github.com/achillean/shodan-python) and [ZoomEye](https://github.com/knownsec/ZoomEye-python) libraries.
 
 The usage of the tool is very simple. The tool needs a list of dorks (located at config
-->config_files->dorks.txt) that will use for searching in both search engines. In this case,
+->config_files->dorks.txt) that will be used for searching in both search engines. In this case,
 the dorks provided are focused on ICS/SCADA and CCTV/IP-Cameras as well as other IT devices that might be used by
 adversaries at early stages of the [kill-chain](https://en.wikipedia.org/wiki/Kill_chain), such as RDPs or VNCs.
 
